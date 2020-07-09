@@ -62,3 +62,30 @@ Runs a container with network defined:
 ```
 docker container run -itd --network host --name nginx_host-network nginx:latest
 ```
+
+## Fourth: Volume
+
+Creates a volume
+```
+docker volume create vol-something
+```
+
+Runs a container with a given volume
+```
+docker run -d --volume vol-ubuntu:/tmp ubuntu
+```
+
+List volumes
+```
+docker volume ls
+```
+
+List volumes not mounted to any container
+```
+docker volume ls --filter "dangling=true"
+```
+
+Check volume settings:
+```
+docker volume inspect VOLUME_NAME
+```
