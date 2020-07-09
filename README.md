@@ -89,3 +89,41 @@ Check volume settings:
 ```
 docker volume inspect VOLUME_NAME
 ```
+
+## Fifth: Docker Compose
+
+Starts (*-d* flag for *detached mode*):
+```
+docker-compose up -d
+```
+
+Stops:
+```
+docker-compose down
+```
+
+To access MySQL database bash:
+```
+docker exec -it db_mysql bash
+```
+
+To open Wordpress, on your browser go to:
+```http
+http://localhost:8000/
+```
+
+And the admin panel:
+```http
+http://localhost:8000/wp-admin/
+```
+
+See the logs:
+```
+docker-compose logs
+```
+
+See last 10 logs for each service:
+```
+docker-compose logs --tail=10
+```
+
