@@ -127,3 +127,10 @@ See last 10 logs for each service:
 docker-compose logs --tail=10
 ```
 
+## Sixth: SQL Server
+
+Builds a simple SQL Server (v2017 latest for Ubuntu) image
+
+```
+docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Pa$$w0rd' -e 'MSSQL_PID=Express' -p 1433:1433 -d mcr.microsoft.com/mssql/server:2017-latest-ubuntu
+```
